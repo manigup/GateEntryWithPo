@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";return e.extend("sap.fiori.gateentrypo.BaseController",{getRouter:function(){return sap.ui.core.UIComponent.getRouterFor(this)},onNavBack:function(){var e=sap.ui.core.routing.History.getInstance().getPreviousHash();if(e!==undefined){window.history.go(-1)}else{this.getRouter().navTo("Report")}}})});

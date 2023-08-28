@@ -1,0 +1,92 @@
+<mvc:View
+    controllerName="sap.fiori.gateentrypo.controller.Report"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="_IDGenPage1"
+        showHeader="false"
+    >
+        <content>
+            <Table
+                id="_IDGenTable1"
+                items="{/GateEntryList}"
+            >
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOverflowToolbar1">
+                        <content>
+                            <Title
+                                id="_IDGenTitle1"
+                                text="Gate Entry List"
+                                level="H2"
+                            />
+                            <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                            <Button
+                                id="_IDGenButton1"
+                                text="Create"
+                                icon="sap-icon://create-form"
+                                iconFirst="false"
+                                press="onCreatePress"
+                            />
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column
+                        id="_IDGenColumn1"
+                        width="7rem"
+                        hAlign="Center"
+                    >
+                        <Text
+                            id="_IDGenText1"
+                            text="PO Number"
+                        />
+                    </Column>
+
+                    <Column
+                        id="_IDGenColumn2"
+                        width="7rem"
+                        hAlign="Center"
+                    >
+                        <Text
+                            id="_IDGenText2"
+                            text="Material"
+                        />
+                    </Column>
+                    <Column
+                        id="_IDGenColumn5"
+                        hAlign="Center"
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                        width="7rem"
+                    >
+                        <Text
+                            id="_IDGenText5"
+                            text="Transport Mode"
+                        />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1">
+                        <cells>
+                            <Text
+                                id="_IDGenText6"
+                                text="{Matnr_Po_Number_Po_Number}"
+                            />
+                            <Link
+                                id="_IDGenLink1"
+                                text="{Matnr_Matnr}"
+                                press="onMatnrPress"
+                            />
+                            <Text
+                                id="_IDGenText9"
+                                text="{Mode}"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
